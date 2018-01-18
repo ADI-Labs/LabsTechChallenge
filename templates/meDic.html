@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Me2 </title>
+</head>
+<style>
+    body{
+        background-color: #9bddff;
+    }
+    h1{
+        color: pink;
+
+</style>
+<body>
+
+    <h1> H E C T O R   F O R E R O {{ name}} </h1>
+    <img src= "{{url_for('static', filename='EDITED.jpg')}}"/>
+
+    /* <img src='image/EDITED.jpg' height '5%' width'4%'> */
+    <div>
+        <ul>
+                {% for key, value in name.items() %}
+                {% if value < 65 %}
+                <strong>{{key}}</strong>
+                {% else %}
+                <i>{{key}}</i>
+                {% endif %}
+                {% endfor %}
+        </ul>
+    <div>
+
+    {% block content %}
+    {% endblock %}
+
+    <h1> I love this class </h1>
+    <p> The members of my team are David and Monica </p>
+        <form>
+            <label for = "pretty?"> pretty? </label>
+            <input type = "text" name = "name" id="name">
+        </form>
+</body>
+</html>
